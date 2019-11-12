@@ -6,10 +6,10 @@ My contributions to the [30DayMapChallenge](https://twitter.com/hashtag/30daymap
 
 ![](graphs/day01.png)
 
-## Day 10 (Balck & White)
+## Day 10 (Black & White)
 
 ![](graphs/day10.png)
 
-## Day 11 (Balck & White)
+## Day 11 (Elevation)
 
 ![](graphs/day11.png)
