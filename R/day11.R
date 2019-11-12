@@ -2,7 +2,7 @@ library(tidyverse)
 library(ggpmthemes)
 library(sf)
 library(rvest)
-library(maptools)
+library(maps)
 
 theme_set(theme_maven())
 
@@ -24,7 +24,6 @@ elevation <- df %>%
     convert = TRUE
   )
 
-library(maps)
 us_states <- st_as_sf(map("state", plot = FALSE, fill = TRUE)) %>%
   rename(region = ID)
 
