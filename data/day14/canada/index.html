@@ -1,0 +1,209 @@
+<!--
+# To the extent possible under law, Eric Muller has waived all
+# copyright and related or neighboring rights to the efele.net/tz maps
+# (comprising the shapefiles, the web pages describing them and the scripts
+# and data used to build them. This work is published from the United States of
+# America.
+#
+# See http://creativecommons.org/publicdomain/zero/1.0/ for more details.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>A shapefile of the TZ timezones of Canada</title>
+<style type="text/css">
+<!--
+.style4 {font-size: small}
+-->
+</style>
+</head>
+
+<body>
+<h2 align='center'>tz_canada, an efele.net/tz map</h2>
+<h3 align='center'>A shapefile of the TZ timezones of Canada</h3>
+<p align='center'>Last data update: May 28, 2016</p>
+<p align='center'>Last page update: May 28, 2016</p>
+<p align='center'>TZ version: 2016d</p>
+
+<p></p>
+
+<p>The tz_canada shapefile (<a href="tz_canada.zip">zip</a>, <a href="tz_canada.zip.sha1">sha1</a>) captures the TZ timezones of Canada.</p>
+
+<p>The geometries are primarily derived from the <a href="/maps/fips-10/map">fip10s</a> layer, which is in turn primarily based on the VMAP0 polbnda layer. The sources of the intra-provinces boundaries are described below.</p>
+
+<p>All the TZ timezones of Canada listed in TZ’s zone.tab are represented. In addition, we elected to retain America/Coral_Harbour as a geographical timezone.</p>
+<h3>Snapshot of the shapefile</h3>
+<p>This is a snaphsot of the shapefile (many of the smaller zones are not visible at this scale):</p>
+<p align="center"><img style='max-width:90%;' src="tz_canada.png" /></p>
+<p align="center">&nbsp;</p>
+<h3>Logical description of the zones</h3>
+<h4>CA01 Alberta</h4>
+<ul>
+  <li>America/Edmonton for the whole province</li>
+</ul>
+<h4>CA02 British Columbia</h4>
+<ul>
+  <li>America/Edmonton: east Kootenay region, including the city of Cranbrook. Data provided by Chris Walton</li>
+  <li>America/Creston: area around Creston. Data provided by Chris Walton.</li>
+  <li>America/Dawson_Creek: area around Dawson Creek. Data provided by Chris Walton.</li>
+  <li>America/Fort_Nelson: the Northern Rockies Regional Municipality, data from <a href="http://www.bcstats.gov.bc.ca/StatisticsBySubject/Geography/TranslationsDataSets.aspx">BCStats</a></li>
+  <li>America/Vancouver for the rest of the province</li>
+</ul>
+<p wrap="">Chris Walton describes the area around Creston as follows:</p>
+<blockquote>
+<p>The area includes:</p>
+<ul>
+<li>the section of Central Kootenay A electoral area lying east of Kootenay Lake</li>
+<li>all of Central Kootenay B electoral area</li>
+<li>all of Central Kootenay C electoral area</li>
+<li>-Creston 1 IR</li>
+<li>Town of Creston</li>
+<li>a small piece of East Kootenay electoral area C (includes the unincorporated community of Ryan).</li>
+</ul>
+</blockquote>
+
+<h4>CA03 Manitoba</h4>
+<ul>
+  <li>America/Winnipeg for the whole province</li>
+</ul>
+<h4>CA04 New Brunswick</h4>
+<ul>
+  <li>America/Moncton for the whole province</li>
+</ul>
+<h4>CA05 Newfoundland and Labrador</h4>
+<ul>
+  <li>
+    <p>America/St_Johns, America/Goose_Bay: the boundary between the two is approximately that shown at <a href="http://www.canadiangeographic.ca/Magazine/SO98/alacarte.asp">http://www.canadiangeographic.ca/Magazine/SO98/alacarte.asp</a>. Data provided by Chris Walton. Chris writes: 
+    The boundary between Atlantic Time and Newfoundland Time is somewhat arbitrary and to the best of my knowledge is not published in any detail on any government issued maps.  This is rugged terrain with very few people.  I placed Cartwright and the Cartwright airport are on Atlantic Time and Paradise River on Newfoundland time which I believe to be correct.    </p>
+  </li>
+  </ul>
+<h4>CA07 Nova Scotia</h4>
+<ul>
+  <li>America/Halifax, America/Glace_Bay: the boundary between the two is ?</li>
+  </ul>
+<h4>CA08 Ontario</h4>
+<ul>
+  <li>America/Rainy_River is around the town of Rainy River. We (arbitrarily) use the Rainy River township limits. Data digitized from CanMatrix map 052D15 <em>Rainy River</em>, 3rd edition.</li>
+  <li>America/Thunder_Bay is around the town of Thunder Bay. We (arbitrarily) use the Thunder_Bay township limits. Data digitized from CanMatrix maps 052A06 <em>Thunder Bay</em>, 7th edition and 052A11 <em>Onion Lake,</em> 3rd edition.</li>
+  <li>America/Nipigon is around the town of Nipigon. We (arbitrarily) use the Nipigon township limits. Data digitized from CanMatrix maps 052A16 <em> Red Rock</em>, 2nd edition and 052H01 <em>Nipigon</em>, 2nd edition.</li>
+  <li>America/Atikokan is around the town of Atikokan. We (arbitrarily) use the township of Atikokan and the Quetico Provincial Park. Data provided by Chris Walton.</li>
+  <li>the rest of the province is divided between America/Winnipeg (~ west of 90W) and America/Toronto (~ east of 90W). On the west side of 90W, the communities of Mishkeegogamang and Pickle Lake used America/Toronto. On the east side of 90W, the communities of Big Trout Lake, Angling Lake, Wunnummin Lake, Kasabonika, and Kingfisher Lake. Data provided by Chris Walton.</li>
+</ul>
+<h4>CA09 Prince Edward Island</h4>
+<ul>
+  <li>America/Halifax for the whole province</li>
+</ul>
+<h4>CA10 Quebec</h4>
+<ul>
+  <li>America/Blanc-Sablon is the Basse-Côte-Nord territory. Data provided by Chris Walton.</li>
+  <li>America/Halifax for the Îles-de-la-Madeleine</li>
+  <li>America/Moncton for the Listuguj  reserve. Data provided by Chris Walton.</li>
+  <li>America/Montreal for the rest of the province, including the whole of Anticosti Island (According to <a href="http://www.justice.gouv.qc.ca/francais/publications/generale/temps-situation.htm">Justice Quebec</a>, “Tout le territoire de la Minganie, qui inclut l’île d’Anticosti, vit à l’heure normale ou avancée de l’Est.” )</li>
+</ul>
+<h4>CA11 Saskatchewan</h4>
+<p>The Saskatchewan <a href="http://www.qp.gov.sk.ca/documents/English/Statutes/Statutes/T14.pdf">Time Act</a> provides for various areas, in particular <a href="http://www.sasked.gov.sk.ca/branches/comm/minister/docs/SD_Pb_SR_Appendix A_2004.06.pdf">school divisions</a> (before their reorganization) to choose their time.</p>
+<ul>
+  <li>America/Swift_Current is around the town of Swift Current. We (arbitrarily) use the Swift Current city limits. [Should that be the Swift Current Time Option Area: the Swift Current Rural School Division No. 75 of 
+    Saskatchewan, the Swift Current School Division No. 94
+    and the Swift Current Roman Catholic Separate School
+  Division No. 11 of Saskatchewan?] Data digitized from CanMatrix map 075J05 <em>Swift Current</em>, 3rd edition. </li>
+  <li>America/Edmonton for the Battle River Time Option Area, defined by the Battle River School Division No. 60. Data provided by Chris Walton.</li>
+  <li>America/Winnipeg for the area around ? [Should that be a Time Option Area?]. Data provided by Chris Walton.</li>
+  <li>America/Regina for the rest of the province</li>
+</ul>
+<h4>CA12 Yukon Territory</h4>
+<ul>
+  <li>America/Dawson is around the town of Dawson. We (arbitrarily) use the township limits digitized from CanMatrix map 116B03 <em>Dawson</em>, 2nd edition</li>
+  <li>America/Whitehorse for the rest of the province</li>
+</ul>
+<h4>CA13 Northwest Territories</h4>
+<ul>
+  <li>America/Inuvik is around Inuvik. We (arbitrarily) use the city limits digitized from CanMatrix map 107B07 <em>Inuvik</em>, 2nd edition</li>
+  <li> America/Yellowknife for the rest of the province</li>
+</ul>
+<h4>CA14 Nunavut</h4>
+<ul>
+  <li>America/Resolute is the Cornwallis island</li>
+  <li>America/Coral_Harbour is at least the Southampton island; we also include somewhat arbitrarily White and Coats islands and smaller islands in the area. Note that America/Coral_Harbour is linked by tz to America/Atikokan and does not appear in zone.tab, but it probably should</li>
+  <li>America/Pangnirtung is the area east of 68W</li>
+  <li>America/Iqaluit is the area between 85W and 68W, excluding the area attributed to America/Coral_Harbour</li>
+  <li>America/Cambdridge_Bay and America/Rankin_Inlet form the rest of the territory. The boundary is ? Data provided by Chris Walton.</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Construction of the shapefile</h3>
+
+<p>The ingredients (<a href="tz_canada_ingredients.zip">zip</a>, <a href="tz_canada_ingredients.zip.sha1">sha1</a>) contain a set of source shapefiles and a script to build the final map from them.</p>
+
+<p>We have a separate shapefile for each province. In each shapefile, we capture the timezone boundaries internal to the province. The idea is that those shapefiles can be combined with various base shapefiles providing the provincial boundaries. (The particular problem we want to solve is that Canada has many islands, and we prefer to not have to worry about those and the provinces they are in when dealing with timezones).</p>
+<hr/>
+
+<h3>Terms of use</h3>
+<p><a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/" style="text-decoration:none;"><img src="http://i.creativecommons.org/l/zero/1.0/80x15.png" border="0" alt="CC0" /></a> To the extent possible under law, Eric Muller has waived all copyright and related or neighboring rights to the <span property="dct:title">efele.net/tz maps</span> (comprising the shapefiles, the web pages describing them and the scripts and data used to build them).
+This work is published from <span about="http://efele.net/maps/tz" property="vcard:Country" datatype="dct:ISO3166" content="US">the United States of America</span>.</p>
+
+
+<p>Note that this does not affect the rights others may have. I am not qualified to determine whether such rights exist.</p>
+<hr/>
+<p><span class="style4"><a href="/contact.html">Contact</a> - <a href="../../thanks.html">Thanks</a></span></p>
+<p></p>
+<p>History:</p>
+<ul>
+  <li>May 28, 2016:
+    <ul>
+      <li>Extended America/Dawson_Creek north to join with America/Fort_Nelson.</li>
+    </ul>
+  </li>
+  <li>March 20, 2016:
+    <ul>
+      <li>added SHA-1 of the zip files.</li>
+    </ul>
+  </li>
+  <li>November 7, 2015:
+  <ul>
+    <li>Addition of America/Fort_Nelson.</li>
+  </ul>
+  </li>
+
+  <li>September 27, 2012:
+  <ul>
+    <li>a couple of typos, thanks to Pavol Vaskovic.</li>
+  </ul>
+  </li>
+
+  <li>June 26, 2012:
+  <ul>
+    <li>added America/Creston</li>
+    <li>fixed a few geometries, thanks to Paul Salber</li>
+  </ul>
+  </li>
+
+  <li>March 16, 2010:
+    <ul>
+      <li>fixed an overlap problem around lon -95.949, lat 66.98; thanks to Gary Baker for reporting this problem</li>
+    </ul>
+  </li>
+  <li>March 13, 2010:
+    <ul>
+      <li>updated to TZ 2010e (no data change)</li>
+    </ul>
+  </li>
+  <li>November 10, 2009:
+    <ul>
+      <li>updated the script to work with the latest PostGis release</li>
+      <li>added the terms of use</li>
+    </ul>
+  </li>
+  <li>October 4, 2008:
+    <ul>
+      <li>clarification of the Anticosti island</li>
+      <li>added the missing America/Coral_Harbour</li>
+      <li>east Kootenay region of BC moved to America/Edmonton</li>
+      <li>added details on the data from Chris Walton</li>
+    </ul>
+  </li>
+  <li>September 16, 2008: first version</li>
+</ul>
+</body>
+</html>

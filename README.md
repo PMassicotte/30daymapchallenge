@@ -21,3 +21,7 @@ My contributions to the [30DayMapChallenge](https://twitter.com/hashtag/30daymap
 ## Day 13 (Tracks)
 
 ![](graphs/day13.png)
+
+## Day 14 (Borders)
+
+![](graphs/day43.png)
