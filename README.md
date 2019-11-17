@@ -24,4 +24,8 @@ My contributions to the [30DayMapChallenge](https://twitter.com/hashtag/30daymap
 
 ## Day 14 (Borders)
 
-![](graphs/day43.png)
+![](graphs/day14.png)
+
+## Day 16 (Places)
+
+![](graphs/day16.png)
