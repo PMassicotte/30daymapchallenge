@@ -29,3 +29,7 @@ My contributions to the [30DayMapChallenge](https://twitter.com/hashtag/30daymap
 ## Day 16 (Places)
 
 ![](graphs/day16.png)
+
+## Day 17 (Zones)
+
+![](graphs/day17.png)
