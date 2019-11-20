@@ -37,3 +37,7 @@ My contributions to the [30DayMapChallenge](https://twitter.com/hashtag/30daymap
 ## Day 19 (Urban)
 
 ![](graphs/day19.png)
+
+## Day 20 (Rural)
+
+![](graphs/day20.png)
