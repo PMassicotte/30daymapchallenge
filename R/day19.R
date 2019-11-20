@@ -34,18 +34,19 @@ p <- dat %>%
       direction = "horizontal",
       keyheight = unit(2, units = "mm"),
       keywidth = unit(12, units = "mm"),
-      title.position = 'top',
+      title.position = "top",
       title.hjust = 0.5,
       nrow = 1,
       byrow = TRUE,
-      label.position = "top",
-      title = NULL,
-      label.theme = element_text(size = 8, color = "white", family = "Yanone Kaffeesatz")
+      label.position = "bottom",
+      label.theme = element_text(size = 8, color = "white", family = "Yanone Kaffeesatz"),
+      title.theme = element_text(size = 12, color = "white", family = "Yanone Kaffeesatz")
     )
   ) +
   labs(
     title = "The past, present and future of urban areas",
-    caption = "#30daymapchallenge (Urban) | Data: https://ourworldindata.org/urbanization | @philmassicotte"
+    caption = "#30daymapchallenge (Urban) | Data: https://ourworldindata.org/urbanization | @philmassicotte",
+    fill = "Proportion of urban areas"
   ) +
   theme(
     legend.position = "bottom",
