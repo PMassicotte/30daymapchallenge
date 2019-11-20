@@ -33,3 +33,7 @@ My contributions to the [30DayMapChallenge](https://twitter.com/hashtag/30daymap
 ## Day 17 (Zones)
 
 ![](graphs/day17.png)
+
+## Day 19 (Urban)
+
+![](graphs/day19.png)
