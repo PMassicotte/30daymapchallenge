@@ -11,14 +11,16 @@ theme_set(theme_light_modified(base_family = "Michroma"))
 
 f <- tempfile()
 download.file("http://www2.census.gov/geo/tiger/GENZ2010/gz_2010_us_050_00_20m.zip", destfile = f)
-unzip(f, exdir = ".")
-usa <- st_read("gz_2010_us_050_00_20m.shp") %>%
+f <- unzip(f, exdir = tempdir())
+f <- f[grepl(".shp$", f)]
+
+usa <- st_read(f) %>%
   janitor::clean_names() %>%
   mutate_if(is.factor, as.character) %>%
   filter(!state %in% c("02","15","72"))
 
 f <- tempfile()
-download.file("https://www2.census.gov/geo/docs/reference/ua/PctUrbanRural_County.xls", destfile = f)
+curl::curl_download("https://www2.census.gov/geo/docs/reference/ua/PctUrbanRural_County.xls", destfile = f)
 rural <- readxl::read_excel(f) %>%
   janitor::clean_names()
 
