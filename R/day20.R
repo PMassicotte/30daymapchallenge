@@ -52,7 +52,7 @@ p <- usa %>%
     labels = c("Mostly rural", "Mostly urban")
   ) +
   labs(
-    title = "Maximum elevation by U.S. states",
+    title = "Rural counties in USA",
     subtitle = "US counties have been classified as **rural** if the percentage of the<br>population living in rural cities was greater than 50 percent.",
     caption = "#30daymapchallenge (Rural) | Data: https://www2.census.gov/ | @philmassicotte"
   ) +
