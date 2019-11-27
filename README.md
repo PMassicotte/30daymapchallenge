@@ -46,6 +46,10 @@ My contributions to the [30DayMapChallenge](https://twitter.com/hashtag/30daymap
 
 ![](graphs/day24.png)
 
-## Day 24 (Hydrology)
+## Day 26 (Hydrology)
 
 ![](graphs/day26.png)
+
+## Day 27 (Resources)
+
+![](graphs/day27.png)
