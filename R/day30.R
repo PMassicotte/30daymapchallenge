@@ -20,23 +20,24 @@ df_qc <- df %>%
 # Plot Qc -----------------------------------------------------------------
 
 p_qc <- df_qc %>%
-  # mutate(size_class = santoku::chop_evenly(Shape_Area, 7)) %>%
   # sample_frac(0.01) %>%
+  mutate(size_class = ifelse(Shape_Area >= 500, 500, Shape_Area)) %>%
+  # mutate(size_class = santoku::chop(Shape_Area, breaks = c(seq(0, 1e3, by = 50), 1e6), labels = c(seq(50, 1e3, by = 50), 1e6))) %>%
   ggplot() +
-  geom_sf(aes(color = Shape_Area, fill = Shape_Area),
+  geom_sf(aes(color = size_class, fill = size_class),
     size = 0.05
   ) +
   rcartocolor::scale_fill_carto_c(
     palette = "Peach",
-    limits = c(0, 100000),
-    oob = scales::squish,
-    labels = scales::label_number_auto(),
+    breaks = c(0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500),
+    labels = c(as.character(c(0, 50, 100, 150, 200, 250, 300, 350, 400, 450)), ">500"),
+    limits = c(0, 500),
     # trans = "log",
     # breaks = scales::breaks_pretty(n = 6),
-    guide = guide_colorbar(
+    guide = guide_legend(
       direction = "horizontal",
-      barheight = unit(5, units = "mm"),
-      barwidth = unit(100, units = "mm"),
+      keyheight = unit(5, units = "mm"),
+      keywidth = unit(10, units = "mm"),
       title.position = "top",
       title.hjust = 0.5,
       nrow = 1,
@@ -47,7 +48,6 @@ p_qc <- df_qc %>%
   ) +
   rcartocolor::scale_color_carto_c(
     palette = "Peach",
-    trans = "log",
     guide = "none"
   ) +
   coord_sf() +
