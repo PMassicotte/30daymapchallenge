@@ -57,3 +57,7 @@ My contributions to the [30DayMapChallenge](https://twitter.com/hashtag/30daymap
 ## Day 29 (Experimental)
 
 ![](graphs/day29.png)
+
+## Day 30 (Home)
+
+![](graphs/day30.png)
