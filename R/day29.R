@@ -132,11 +132,19 @@ p <- ggplot() +
     panel.background = element_rect(fill = "black")
   )
 
+# Save plot ---------------------------------------------------------------
+
+destfile <- here::here("graphs", "day29.pdf")
+
 ggsave(
-  here::here("graphs", "day29.png"),
-  device = "png",
-  type = "cairo",
-  dpi = 600,
+  destfile,
+  device = cairo_pdf,
   width = 5.52 * 1.15,
   height = 4.68 * 1.15
 )
+
+knitr::plot_crop(destfile)
+
+bitmap <- pdftools::pdf_render_page(destfile, dpi = 600)
+destfile <- here::here("graphs", "day29.png")
+png::writePNG(bitmap, destfile)

@@ -65,18 +65,19 @@ p <- ws %>%
     )
   )
 
+# Save plot ---------------------------------------------------------------
+
+destfile <- here::here("graphs", "day26.pdf")
+
 ggsave(
-  here::here("graphs", "day26.png"),
-  type = "cairo",
-  device = "png",
-  dpi = 600,
+  destfile,
+  device = cairo_pdf,
   width = 5.52 * 1.15,
   height = 4.68 * 1.15
 )
 
-# ggsave(
-#   here::here("graphs", "day26.pdf"),
-#   device = cairo_pdf,
-#   width = 5.52 * 1.15,
-#   height = 4.68 * 1.15
-# )
+knitr::plot_crop(destfile)
+
+bitmap <- pdftools::pdf_render_page(destfile, dpi = 600)
+destfile <- here::here("graphs", "day26.png")
+png::writePNG(bitmap, destfile)

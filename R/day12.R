@@ -123,11 +123,19 @@ p <- df %>%
     axis.title = element_blank()
   )
 
+# Save plot ---------------------------------------------------------------
+
+destfile <- here::here("graphs", "day12.pdf")
+
 ggsave(
-  here::here("graphs", "day12.png"),
-  type = "cairo",
-  device = "png",
-  dpi = 600,
+  destfile,
+  device = cairo_pdf,
   width = 5.52,
   height = 4.68
 )
+
+knitr::plot_crop(destfile)
+
+bitmap <- pdftools::pdf_render_page(destfile, dpi = 600)
+destfile <- here::here("graphs", "day12.png")
+png::writePNG(bitmap, destfile)

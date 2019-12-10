@@ -79,11 +79,19 @@ p_qc <- df_qc %>%
     panel.background = element_rect(fill = "black")
   )
 
+# Save plot ---------------------------------------------------------------
+
+destfile <- here::here("graphs", "day30.pdf")
+
 ggsave(
-  here::here("graphs", "day30.png"),
-  device = "png",
-  type = "cairo",
-  dpi = 600,
-  width = 9,
-  height = 9
+  destfile,
+  device = cairo_pdf,
+  height = 9,
+  width = 9
 )
+
+knitr::plot_crop(destfile)
+
+bitmap <- pdftools::pdf_render_page(destfile, dpi = 600)
+destfile <- here::here("graphs", "day30.png")
+png::writePNG(bitmap, destfile)

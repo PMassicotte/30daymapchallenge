@@ -68,11 +68,19 @@ p <- dat %>%
     strip.text = element_text(color = "gray75", size = 20, face = "bold")
   )
 
+# Save plot ---------------------------------------------------------------
+
+destfile <- here::here("graphs", "day19.pdf")
+
 ggsave(
-  here::here("graphs", "day19.png"),
-  type = "cairo",
-  device = "png",
-  dpi = 600,
+  destfile,
+  device = cairo_pdf,
   width = 5.52 * 1.15,
   height = 4.68 * 1.15
 )
+
+knitr::plot_crop(destfile)
+
+bitmap <- pdftools::pdf_render_page(destfile, dpi = 600)
+destfile <- here::here("graphs", "day19.png")
+png::writePNG(bitmap, destfile)

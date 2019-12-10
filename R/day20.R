@@ -82,18 +82,19 @@ p <- usa %>%
 # +
 #   geom_sf(data = usa_outline, fill = NA, color = "gray75", size = 0.5)
 
+# Save plot ---------------------------------------------------------------
+
+destfile <- here::here("graphs", "day20.pdf")
+
 ggsave(
-  here::here("graphs", "day20.png"),
-  type = "cairo",
-  device = "png",
-  dpi = 600,
+  destfile,
+  device = cairo_pdf,
   width = 5.52 * 1.15,
   height = 4.68 * 1.15
 )
 
-# ggsave(
-#   here::here("graphs", "day20.pdf"),
-#   device = cairo_pdf,
-#   width = 5.52 * 1.15,
-#   height = 4.68 * 1.15
-# )
+knitr::plot_crop(destfile)
+
+bitmap <- pdftools::pdf_render_page(destfile, dpi = 600)
+destfile <- here::here("graphs", "day20.png")
+png::writePNG(bitmap, destfile)

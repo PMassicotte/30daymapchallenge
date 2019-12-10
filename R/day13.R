@@ -77,13 +77,19 @@ p <- roads %>%
     axis.title = element_blank()
   )
 
-# p
+# Save plot ---------------------------------------------------------------
+
+destfile <- here::here("graphs", "day13.pdf")
 
 ggsave(
-  here::here("graphs", "day13.png"),
-  type = "cairo",
-  device = "png",
-  dpi = 600,
+  destfile,
+  device = cairo_pdf,
   width = 5.52,
   height = 4.68
 )
+
+knitr::plot_crop(destfile)
+
+bitmap <- pdftools::pdf_render_page(destfile, dpi = 600)
+destfile <- here::here("graphs", "day13.png")
+png::writePNG(bitmap, destfile)

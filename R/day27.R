@@ -59,18 +59,19 @@ p <- df2 %>%
     legend.background = element_rect(fill = "#ABB7B7")
   )
 
+# Save plot ---------------------------------------------------------------
+
+destfile <- here::here("graphs", "day27.pdf")
+
 ggsave(
-  here::here("graphs", "day27.png"),
-  device = "png",
-  type = "cairo",
-  dpi = 600,
+  destfile,
+  device = cairo_pdf,
   width = 3.52 * 1.1,
   height = 4.68 * 1.1
 )
 
-# ggsave(
-#   here::here("graphs", "day27.pdf"),
-#   device = cairo_pdf,
-#   width = 3.52 * 1.1,
-#   height = 4.68 * 1.1
-# )
+knitr::plot_crop(destfile)
+
+bitmap <- pdftools::pdf_render_page(destfile, dpi = 600)
+destfile <- here::here("graphs", "day27.png")
+png::writePNG(bitmap, destfile)

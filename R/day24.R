@@ -19,7 +19,7 @@ maple_harvested <- html %>%
   do.call(as_tibble, .) %>%
   janitor::clean_names() %>%
   mutate(average_annual_harvest_gallons = parse_number(average_annual_harvest_gallons)) %>%
-  # rename(region = x_u_feff_region) %>%
+  rename(region = x_u_feff_region) %>%
   separate(region, into = c("region", "country"), sep = ",") %>%
   mutate_if(is.character, .funs = list(str_trim)) %>%
   arrange(desc(average_annual_harvest_gallons)) %>%
@@ -153,12 +153,19 @@ p1 / p2 +
 
 )
 
+# Save plot ---------------------------------------------------------------
+
+destfile <- here::here("graphs", "day24.pdf")
+
 ggsave(
-  here::here("graphs", "day24.png"),
-  type = "cairo",
-  device = "png",
-  dpi = 600,
+  destfile,
+  device = cairo_pdf,
   width = 5.52 * 1.3,
   height = 4.68 * 1.15
 )
 
+knitr::plot_crop(destfile)
+
+bitmap <- pdftools::pdf_render_page(destfile, dpi = 600)
+destfile <- here::here("graphs", "day24.png")
+png::writePNG(bitmap, destfile)

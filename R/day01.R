@@ -90,11 +90,19 @@ ggplot() +
     caption = str_wrap("day 1 of the #30DayMapChallenge | Data: https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat | Dataviz: @philmassicotte", 250)
   )
 
+# Save plot ---------------------------------------------------------------
+
+destfile <- here::here("graphs", "day01.pdf")
+
 ggsave(
-  here::here("graphs", "day01.png"),
-  device = "png",
-  type = "cairo",
-  width = 8,
-  height = 8 / 1.685,
-  dpi = 600
+  destfile,
+  device = cairo_pdf,
+  height = 8,
+  width = 8
 )
+
+knitr::plot_crop(destfile)
+
+bitmap <- pdftools::pdf_render_page(destfile, dpi = 600)
+destfile <- here::here("graphs", "day01.png")
+png::writePNG(bitmap, destfile)

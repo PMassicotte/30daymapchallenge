@@ -79,11 +79,19 @@ p <- df %>%
     plot.caption = element_text(color = "gray75", size = 8)
   )
 
+# Save plot ---------------------------------------------------------------
+
+destfile <- here::here("graphs", "day10.pdf")
+
 ggsave(
-  here::here("graphs", "day10.png"),
-  type = "cairo",
-  device = "png",
-  dpi = 600,
-  width = 8,
-  height = 8
+  destfile,
+  device = cairo_pdf,
+  height = 8,
+  width = 8
 )
+
+knitr::plot_crop(destfile)
+
+bitmap <- pdftools::pdf_render_page(destfile, dpi = 600)
+destfile <- here::here("graphs", "day10.png")
+png::writePNG(bitmap, destfile)

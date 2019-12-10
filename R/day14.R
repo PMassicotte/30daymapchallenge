@@ -42,7 +42,7 @@ p <- shp %>%
   ) +
   labs(
     title = "Canada timezone borders",
-    caption = "#30daymapchallenge (Borders) | Data: http://efele.net/maps/tz/canada/ | • @p� @philmassicotte"
+    caption = "#30daymapchallenge (Borders) | Data: http://efele.net/maps/tz/canada/ | • @p? @philmassicotte"
   ) +
   theme(
     legend.position = "bottom",
@@ -62,19 +62,20 @@ p <- shp %>%
     axis.title = element_blank()
   )
 
+# Save plot ---------------------------------------------------------------
+
+destfile <- here::here("graphs", "day14.pdf")
+
 ggsave(
-  here::here("graphs", "day14.png"),
-  type = "cairo",
-  device = "png",
-  dpi = 600,
+  destfile,
+  device = cairo_pdf,
   width = 5,
   height = 6
 )
 
-# ggsave(
-#   here::here("graphs", "day14.pdf"),
-#   device = cairo_pdf,
-#   width = 5,
-#   height = 6
-# )
+knitr::plot_crop(destfile)
+
+bitmap <- pdftools::pdf_render_page(destfile, dpi = 600)
+destfile <- here::here("graphs", "day14.png")
+png::writePNG(bitmap, destfile)
 
