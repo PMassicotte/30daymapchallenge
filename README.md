@@ -6,6 +6,10 @@ My contributions to the [30DayMapChallenge](https://twitter.com/hashtag/30daymap
 
 ![](graphs/day01.png)
 
+## Day 2 (Lines)
+
+![](graphs/day02.png)
+
 ## Day 10 (Black & White)
 
 ![](graphs/day10.png)
