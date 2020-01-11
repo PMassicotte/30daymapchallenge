@@ -10,6 +10,10 @@ My contributions to the [30DayMapChallenge](https://twitter.com/hashtag/30daymap
 
 ![](graphs/day02.png)
 
+## Day 4, 6, 7, 8, 9 (hexagons, blue, green, red, yellow)
+
+![](graphs/day04_06_07_08_09.png)
+
 ## Day 10 (Black & White)
 
 ![](graphs/day10.png)
