@@ -143,7 +143,7 @@ p2 <- patchwork::wrap_plots(p, ncol = 2) +
       ),
       plot.caption = element_text(color = "grey75", family = "Abel", size = 14)
     ),
-    title = "US population in <i style='color:#8ebdddff'>1910</i>, <i style='color:#68b05dff'>1946</i>, <i style='color:#ae123aff'>1982</i> and <i style='color:#e86a20ff'>2018</i>",
+    title = "US births in <i style='color:#8ebdddff'>1910</i>, <i style='color:#68b05dff'>1946</i>, <i style='color:#ae123aff'>1982</i> and <i style='color:#e86a20ff'>2018</i>",
     caption = "#30daymapchallenge (#4, #6, #7, #8, #9) | Data: https://www.ssa.gov/OACT/babynames/limits.html | @philmassicotte"
   )
 
